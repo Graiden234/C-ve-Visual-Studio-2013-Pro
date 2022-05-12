@@ -1,0 +1,164 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace odev
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnYazdir_Click(object sender, EventArgs e)
+        {
+            int sayi = int.Parse(txtSayi.Text),
+                binler = sayi / 1000,
+                yuzler = (sayi / 100) % 10,
+                onlar = (sayi / 10) % 10,
+                birler = sayi % 10;
+            lblSonuc.Text = "";
+            switch (binler)
+            {
+                case 1:
+                    lblSonuc.Text += "bin";
+                    break;
+                case 2:
+                    lblSonuc.Text += "iki bin";
+                    break;
+                case 3:
+                    lblSonuc.Text += "üç bin";
+                    break;
+                case 4:
+                    lblSonuc.Text += "dört bin";
+                    break;
+                case 5:
+                    lblSonuc.Text += "beş bin";
+                    break;
+                case 6:
+                    lblSonuc.Text += "altı bin";
+                    break;
+                case 7:
+                    lblSonuc.Text += "yedi bin";
+                    break;
+                case 8:
+                    lblSonuc.Text += "sekiz bin";
+                    break;
+                case 9:
+                    lblSonuc.Text += "dokuz bin";
+                    break;
+                default:
+                    lblSonuc.Text += "";
+                    break;
+            }
+
+            switch (yuzler)
+            {
+                case 1:
+                    lblSonuc.Text += " yüz";
+                    break;
+                case 2:
+                    lblSonuc.Text += " iki yüz";
+                    break;
+                case 3:
+                    lblSonuc.Text += " üç yüz";
+                    break;
+                case 4:
+                    lblSonuc.Text += " dört yüz";
+                    break;
+                case 5:
+                    lblSonuc.Text += " beş yüz";
+                    break;
+                case 6:
+                    lblSonuc.Text += " altı yüz";
+                    break;
+                case 7:
+                    lblSonuc.Text += " yedi yüz";
+                    break;
+                case 8:
+                    lblSonuc.Text += " sekiz yüz";
+                    break;
+                case 9:
+                    lblSonuc.Text += " dokuz yüz";
+                    break;
+                default:
+                    lblSonuc.Text += "";
+                    break;
+            }
+
+            switch (onlar)
+            {
+                case 1:
+                    lblSonuc.Text += " on";
+                    break;
+                case 2:
+                    lblSonuc.Text += " yirmi";
+                    break;
+                case 3:
+                    lblSonuc.Text += " otuz";
+                    break;
+                case 4:
+                    lblSonuc.Text += " kırk";
+                    break;
+                case 5:
+                    lblSonuc.Text += " elli";
+                    break;
+                case 6:
+                    lblSonuc.Text += " altmış";
+                    break;
+                case 7:
+                    lblSonuc.Text += " yetmiş";
+                    break;
+                case 8:
+                    lblSonuc.Text += " seksen";
+                    break;
+                case 9:
+                    lblSonuc.Text += " doksan";
+                    break;
+                default:
+                    lblSonuc.Text += "";
+                    break;
+            }
+
+            switch (birler)
+            {
+                case 1:
+                    lblSonuc.Text += " bir";
+                    break;
+                case 2:
+                    lblSonuc.Text += " iki";
+                    break;
+                case 3:
+                    lblSonuc.Text += " üç";
+                    break;
+                case 4:
+                    lblSonuc.Text += " dört";
+                    break;
+                case 5:
+                    lblSonuc.Text += " beş";
+                    break;
+                case 6:
+                    lblSonuc.Text += " altı";
+                    break;
+                case 7:
+                    lblSonuc.Text += " yedi";
+                    break;
+                case 8:
+                    lblSonuc.Text += " sekiz";
+                    break;
+                case 9:
+                    lblSonuc.Text += " dokuz";
+                    break;
+                default:
+                    lblSonuc.Text += "";
+                    break;
+            }
+        }
+    }
+}
